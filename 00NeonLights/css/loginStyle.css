@@ -1,0 +1,70 @@
+body {
+  height: 100vh;
+  margin: 0;
+  background: rgba(0, 0, 0);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mainContent {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.formContainer {
+  border-radius: 7.5px;
+  padding: 120px 80px;
+  background: #ffffff2e;
+  border: #1e1e1e 1px solid;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.loginForm :is(input, button) {
+  position: relative;
+  display: flex;
+  top: 30px;
+}
+
+.loginForm *:is(input) {
+  padding: 10px 30px;
+  outline: none;
+}
+
+.neonLight {
+  background-color: var(--color);
+  padding: var(--padding);
+  position: absolute;
+  display: flex;
+  border-radius: 50%;
+  filter: blur(var(--blur));
+  animation: neonPulsing 6s ease-in-out infinite;
+  z-index: -1;
+}
+
+.lightsContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+@keyframes neonPulsing {
+  0% {
+    padding: var(--padding);
+  }
+  50% {
+    padding: 495px;
+  }
+  100% {
+    padding: var(--padding);
+  }
+}
